@@ -1,0 +1,30 @@
+### Headers settings
+company: Kohda Lab
+
+### Xcode project settings
+project_name: swift01
+xcodeproj_path: HelloSwiftUI/HelloSwiftUI.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: HelloSwiftUI
+
+# The file path for new modules
+project_file_path: HelloSwiftUI/Classes/Modules
+
+# The Xcode group path to new modules
+project_group_path: HelloSwiftUI/Classes/Modules
+
+### Tests generation settings section
+# The tests target name
+test_target: HelloSwiftUI
+
+# The file path for new tests
+test_file_path: HelloSwiftUITests/Classes/Modules
+
+# The Xcode group path to new tests
+test_group_path: HelloSwiftUITests/Classes/Modules
+
+### Templates
+templates:
+- {name: viper, git: 'git@github.com/junkohda/viper.git'}
