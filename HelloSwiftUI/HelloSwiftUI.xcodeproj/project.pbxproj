@@ -12,7 +12,8 @@
 		554A2EDB2AA6031500010F4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A2EDA2AA6031500010F4E /* ContentView.swift */; };
 		554A2EDD2AA6031700010F4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554A2EDC2AA6031700010F4E /* Assets.xcassets */; };
 		554A2EE02AA6031700010F4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554A2EDF2AA6031700010F4E /* Preview Assets.xcassets */; };
-		554A2EE82AA60A7700010F4E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A2EE72AA60A7700010F4E /* ColorExtension.swift */; };
+		554A2EE82AA60A7700010F4E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A2EE72AA60A7700010F4E /* Color.swift */; };
+		5550C2252AB71C1A001CF015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550C2242AB71C1A001CF015 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +22,8 @@
 		554A2EDA2AA6031500010F4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		554A2EDC2AA6031700010F4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		554A2EDF2AA6031700010F4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		554A2EE72AA60A7700010F4E /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		554A2EE72AA60A7700010F4E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5550C2242AB71C1A001CF015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			isa = PBXGroup;
 			children = (
 				554A2ED72AA6031500010F4E /* HelloSwiftUI */,
+				5550C22E2AB71DD1001CF015 /* HelloSwiftUiTests */,
 				554A2ED62AA6031500010F4E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +58,8 @@
 		554A2ED72AA6031500010F4E /* HelloSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				5550C2202AB71B28001CF015 /* Resources */,
+				5550C21F2AB71B1E001CF015 /* Classes */,
 				554A2EE62AA60A6000010F4E /* Util */,
 				554A2ED82AA6031500010F4E /* HelloSwiftUIApp.swift */,
 				554A2EDA2AA6031500010F4E /* ContentView.swift */,
@@ -75,9 +80,135 @@
 		554A2EE62AA60A6000010F4E /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				554A2EE72AA60A7700010F4E /* ColorExtension.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		5550C21F2AB71B1E001CF015 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5550C2212AB71B5D001CF015 /* Application */,
+				5550C2222AB71B6B001CF015 /* Common */,
+				5550C2232AB71B86001CF015 /* Modules */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5550C2202AB71B28001CF015 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5550C2212AB71B5D001CF015 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5550C2242AB71C1A001CF015 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5550C2222AB71B6B001CF015 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5550C22B2AB71C71001CF015 /* DataManagers */,
+				5550C22A2AB71C67001CF015 /* Entities */,
+				5550C2292AB71C5F001CF015 /* Extensions */,
+				5550C2282AB71C53001CF015 /* Utils */,
+				5550C2272AB71C45001CF015 /* ViewManagers */,
+				5550C2262AB71C3B001CF015 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5550C2232AB71B86001CF015 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5550C2262AB71C3B001CF015 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5550C2272AB71C45001CF015 /* ViewManagers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewManagers;
+			sourceTree = "<group>";
+		};
+		5550C2282AB71C53001CF015 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5550C2292AB71C5F001CF015 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				554A2EE72AA60A7700010F4E /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5550C22A2AB71C67001CF015 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5550C22B2AB71C71001CF015 /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				5550C22D2AB71CBB001CF015 /* Local */,
+				5550C22C2AB71CB6001CF015 /* Remote */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
+		5550C22C2AB71CB6001CF015 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		5550C22D2AB71CBB001CF015 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		5550C22E2AB71DD1001CF015 /* HelloSwiftUiTests */ = {
+			isa = PBXGroup;
+			children = (
+				5550C22F2AB71E15001CF015 /* Classes */,
+			);
+			path = HelloSwiftUiTests;
+			sourceTree = "<group>";
+		};
+		5550C22F2AB71E15001CF015 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5550C2302AB71E1F001CF015 /* Modules */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5550C2302AB71E1F001CF015 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				554A2EE82AA60A7700010F4E /* ColorExtension.swift in Sources */,
+				5550C2252AB71C1A001CF015 /* AppDelegate.swift in Sources */,
+				554A2EE82AA60A7700010F4E /* Color.swift in Sources */,
 				554A2EDB2AA6031500010F4E /* ContentView.swift in Sources */,
 				554A2ED92AA6031500010F4E /* HelloSwiftUIApp.swift in Sources */,
 			);

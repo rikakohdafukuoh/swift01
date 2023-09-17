@@ -1,5 +1,5 @@
 //
-//  ColorExtension.swift
+//  Color.swift
 //  HelloSwiftUI
 //
 //  Created by rika.kohda on 2023/09/04.
