@@ -27,4 +27,4 @@ test_group_path: HelloSwiftUITests/Classes/Modules
 
 ### Templates
 templates:
-- {name: viper, git: 'git@github.com/junkohda/viper.git'}
+- {name: viper, local: './HelloSwiftUI/HelloSwiftUI/Templates/viper'}
