@@ -15,6 +15,8 @@
 		554A2EE82AA60A7700010F4E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A2EE72AA60A7700010F4E /* Color.swift */; };
 		5550C2252AB71C1A001CF015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550C2242AB71C1A001CF015 /* AppDelegate.swift */; };
 		55CA496D2AF1378D009422D2 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CA496C2AF1378D009422D2 /* CounterView.swift */; };
+		55CA49702AF14129009422D2 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = 55CA496F2AF14129009422D2 /* OHHTTPStubs */; };
+		55CA49722AF14129009422D2 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 55CA49712AF14129009422D2 /* OHHTTPStubsSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5502706C2AA7674700921888 /* MasonryStack in Frameworks */,
+				55CA49722AF14129009422D2 /* OHHTTPStubsSwift in Frameworks */,
+				55CA49702AF14129009422D2 /* OHHTTPStubs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +236,8 @@
 			name = HelloSwiftUI;
 			packageProductDependencies = (
 				5502706B2AA7674700921888 /* MasonryStack */,
+				55CA496F2AF14129009422D2 /* OHHTTPStubs */,
+				55CA49712AF14129009422D2 /* OHHTTPStubsSwift */,
 			);
 			productName = HelloSwiftUI;
 			productReference = 554A2ED52AA6031500010F4E /* HelloSwiftUI.app */;
@@ -245,7 +251,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					554A2ED42AA6031500010F4E = {
 						CreatedOnToolsVersion = 14.1;
@@ -263,6 +269,7 @@
 			mainGroup = 554A2ECC2AA6031500010F4E;
 			packageReferences = (
 				5502706A2AA7674700921888 /* XCRemoteSwiftPackageReference "MasonryStack" */,
+				55CA496E2AF14129009422D2 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
 			);
 			productRefGroup = 554A2ED62AA6031500010F4E /* Products */;
 			projectDirPath = "";
@@ -337,6 +344,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -397,6 +405,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -503,6 +512,14 @@
 				minimumVersion = 0.1.0;
 			};
 		};
+		55CA496E2AF14129009422D2 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -510,6 +527,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5502706A2AA7674700921888 /* XCRemoteSwiftPackageReference "MasonryStack" */;
 			productName = MasonryStack;
+		};
+		55CA496F2AF14129009422D2 /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55CA496E2AF14129009422D2 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
+		55CA49712AF14129009422D2 /* OHHTTPStubsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55CA496E2AF14129009422D2 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubsSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
