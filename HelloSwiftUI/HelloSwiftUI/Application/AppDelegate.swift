@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })?.value, let number = Int(value) {
                 page = number - 1
             }
-            return HTTPStubsResponse(jsonObject: (0 ..< 20).map({ $0 + 20 * page }), statusCode: 200, headers: ["Content-Type": "application/json"]).responseTime(TimeInterval(1 * Int.random(in: 1..<3)))
+            return HTTPStubsResponse(jsonObject: (0 ..< 30).map({ $0 + 30 * page }), statusCode: 200, headers: ["Content-Type": "application/json"]).responseTime(TimeInterval(1 * Int.random(in: 1..<3)))
         }
     }
     
