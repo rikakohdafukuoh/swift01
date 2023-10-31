@@ -3,4 +3,687 @@
    uuid = "67FEDB07-2EB9-4FF2-A575-967918DD9E2A"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2009F432-C78F-4848-B2B7-FA58FA45B917"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Classes/Application/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "scene(_:willConnectTo:options:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C7B3CF3B-4DD1-45A7-BBE9-E65C2B9E40CF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/View/Main/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA2E8BF1-EF9A-4985-9D9C-FBDB660EDE7F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/View/Main/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "MainView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "BA2E8BF1-EF9A-4985-9D9C-FBDB660EDE7F - b46ee766025e967"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.MainView.init() -&gt; HelloSwiftUI.MainView"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/View/Main/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "BA2E8BF1-EF9A-4985-9D9C-FBDB660EDE7F - 533bf249e1d23c37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.MainView.init(appState: SwiftUI.EnvironmentObject&lt;HelloSwiftUI.AppState&gt;, appDelegate: SwiftUI.UIApplicationDelegateAdaptor&lt;HelloSwiftUI.AppDelegate&gt;) -&gt; HelloSwiftUI.MainView"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/View/Main/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D1219E5-5FC1-4263-8279-CC0B76C42F56"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Scenes/Splash/SplashView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "SplashView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "0D1219E5-5FC1-4263-8279-CC0B76C42F56 - 7ff2319091d88740"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.SplashView.init() -&gt; HelloSwiftUI.SplashView"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Scenes/Splash/SplashView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "0D1219E5-5FC1-4263-8279-CC0B76C42F56 - 5469c9ebf05eded2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.SplashView.init(appState: SwiftUI.EnvironmentObject&lt;HelloSwiftUI.AppState&gt;) -&gt; HelloSwiftUI.SplashView"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Scenes/Splash/SplashView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB15CEC7-F840-4E3D-BB4D-7540EE98A0C5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Scenes/Splash/SplashView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "FB15CEC7-F840-4E3D-BB4D-7540EE98A0C5 - bac8e8bdb4738f32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in closure #2 () -&gt; () in HelloSwiftUI.SplashView.body.getter : some"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Scenes/Splash/SplashView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "FB15CEC7-F840-4E3D-BB4D-7540EE98A0C5 - bac8e8bdb4738f32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in closure #2 () -&gt; () in HelloSwiftUI.SplashView.body.getter : some"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Scenes/Splash/SplashView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87B4C2AC-AEDF-4DE5-9847-5512D72416D7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Application/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "SceneDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "87B4C2AC-AEDF-4DE5-9847-5512D72416D7 - ecc27b4fabac6a73"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.SceneDelegate.__allocating_init() -&gt; HelloSwiftUI.SceneDelegate"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Application/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "87B4C2AC-AEDF-4DE5-9847-5512D72416D7 - 454413312ab2be56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.SceneDelegate.init() -&gt; HelloSwiftUI.SceneDelegate"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Application/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "87B4C2AC-AEDF-4DE5-9847-5512D72416D7 - f1f73b33edca5ad7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.SceneDelegate.__deallocating_deinit"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Application/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "87B4C2AC-AEDF-4DE5-9847-5512D72416D7 - 454413312ab2be56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.SceneDelegate.init() -&gt; HelloSwiftUI.SceneDelegate"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Application/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EEEC0CFD-A0E8-41C2-B198-395F3328519C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Application/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EEEC0CFD-A0E8-41C2-B198-395F3328519C - 7742717fdc9416e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.AppDelegate.__allocating_init() -&gt; HelloSwiftUI.AppDelegate"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Application/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "EEEC0CFD-A0E8-41C2-B198-395F3328519C - 199e37a3a930da4f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.AppDelegate.init() -&gt; HelloSwiftUI.AppDelegate"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "EEEC0CFD-A0E8-41C2-B198-395F3328519C - 5931166a79fd6577"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.AppDelegate.__deallocating_deinit"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Application/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "EEEC0CFD-A0E8-41C2-B198-395F3328519C - 37faf50e5ee7b975"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Application/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5246D8A9-8D28-48D7-B83E-DEEEAC07A34B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Application/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "scene(_:willConnectTo:options:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5246D8A9-8D28-48D7-B83E-DEEEAC07A34B - 172d66cedbc61ee0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.SceneDelegate.scene(_: __C.UIScene, willConnectTo: __C.UISceneSession, options: __C.UISceneConnectionOptions) -&gt; ()"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Application/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "5246D8A9-8D28-48D7-B83E-DEEEAC07A34B - 172d66cedbc61ecf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.SceneDelegate.scene(_: __C.UIScene, willConnectTo: __C.UISceneSession, options: __C.UISceneConnectionOptions) -&gt; ()"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Application/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "5246D8A9-8D28-48D7-B83E-DEEEAC07A34B - 172d66cedbc61eae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.SceneDelegate.scene(_: __C.UIScene, willConnectTo: __C.UISceneSession, options: __C.UISceneConnectionOptions) -&gt; ()"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Application/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "5246D8A9-8D28-48D7-B83E-DEEEAC07A34B - 172d66cedbc61ee0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.SceneDelegate.scene(_: __C.UIScene, willConnectTo: __C.UISceneSession, options: __C.UISceneConnectionOptions) -&gt; ()"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Application/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4479898-E079-448B-B25C-816E6EEDB4AB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Application/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9252AB7F-468C-4D60-9C01-830BDE9AA608"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Scenes/Main/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "MainView"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92A119B3-353D-48A8-B52E-2F863CF12A45"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Application/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "mock()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0429522E-797C-4013-B44F-32DB4A26D675"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Scenes/Main/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A43F689C-F2F0-40DF-9816-7AC58085BF0F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Scenes/Main/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "452AAD5F-2ECD-4C36-8782-731DBB70D658"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Scenes/Main/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "MainView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "452AAD5F-2ECD-4C36-8782-731DBB70D658 - ce4e27ab23ed2d2b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.MainView.appState.getter : HelloSwiftUI.AppState"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Scenes/Main/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "452AAD5F-2ECD-4C36-8782-731DBB70D658 - 8a27ac3468973fc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.MainView.$appState.getter : SwiftUI.EnvironmentObject&lt;HelloSwiftUI.AppState&gt;.Wrapper"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Scenes/Main/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "452AAD5F-2ECD-4C36-8782-731DBB70D658 - b29d196a71f3166b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 0 of HelloSwiftUI.MainView.init(appState: SwiftUI.EnvironmentObject&lt;HelloSwiftUI.AppState&gt;) -&gt; HelloSwiftUI.MainView"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Scenes/Main/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "297E95BD-1002-425F-86D3-BDFBBB1E01FE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Scenes/Number/NumbersView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "fetchData(page:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98B967AB-4FED-46B3-9DE3-6484E337D708"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Scenes/Number/NumbersView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "loadMoreData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A166F212-A032-4045-BDD8-9E3DCC7BD05E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Scenes/Number/NumbersView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "NumbersViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A166F212-A032-4045-BDD8-9E3DCC7BD05E - 19a1cd83d3504293"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.NumbersViewModel.deinit"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Scenes/Number/NumbersView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "A166F212-A032-4045-BDD8-9E3DCC7BD05E - 796bedec7df6c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloSwiftUI.NumbersViewModel.__deallocating_deinit"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Scenes/Number/NumbersView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "507E7810-5D70-4A04-9440-31A2A109D7C1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwiftUI/Scenes/Number/NumbersView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "fetchData(page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "507E7810-5D70-4A04-9440-31A2A109D7C1 - e9dd0d7db1884e1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Error&gt;) -&gt; ()) -&gt; () in HelloSwiftUI.NumbersViewModel.fetchData(page: Swift.Int) -&gt; Combine.Future&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Error&gt;"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Scenes/Number/NumbersView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "816">
+               </Location>
+               <Location
+                  uuid = "507E7810-5D70-4A04-9440-31A2A109D7C1 - ee27799781e376d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 ((Swift.Result&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Error&gt;) -&gt; ()) -&gt; () in HelloSwiftUI.NumbersViewModel.fetchData(page: Swift.Int) -&gt; Combine.Future&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Error&gt;"
+                  moduleName = "HelloSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jun.kohda/git/swift01/HelloSwiftUI/HelloSwiftUI/Scenes/Number/NumbersView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
