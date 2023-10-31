@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func mock() {
-        stub(condition: isScheme("https") && isHost("sample.mazrica.com") && isPath("/items")) { request in
+        stub(condition: isScheme("https") && isHost("mobile.app.hub.com") && isPath("/items")) { request in
             var page = 0
             guard let url = request.url else {
                 return HTTPStubsResponse(error: NSError(domain: NSURLErrorDomain, code: URLError.badServerResponse.rawValue))

@@ -11,7 +11,6 @@
 		554A2EDB2AA6031500010F4E /* HelloCatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A2EDA2AA6031500010F4E /* HelloCatsView.swift */; };
 		554A2EE82AA60A7700010F4E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A2EE72AA60A7700010F4E /* Color.swift */; };
 		557E867E2AF1A213003C3936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557E867D2AF1A213003C3936 /* LaunchScreen.storyboard */; };
-		557E86802AF1A30B003C3936 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 557E867F2AF1A30B003C3936 /* Info.plist */; };
 		5596F82A2AF196B500F874F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596F8292AF196B500F874F4 /* AppDelegate.swift */; };
 		55B399AB2AF17881008CF1BB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B399AA2AF17881008CF1BB /* AppState.swift */; };
 		55B399AE2AF17904008CF1BB /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B399AD2AF17904008CF1BB /* SplashView.swift */; };
@@ -212,7 +211,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				557E86802AF1A30B003C3936 /* Info.plist in Resources */,
 				557E867E2AF1A213003C3936 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
