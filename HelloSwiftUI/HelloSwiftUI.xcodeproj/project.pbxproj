@@ -14,6 +14,7 @@
 		554A2EE02AA6031700010F4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554A2EDF2AA6031700010F4E /* Preview Assets.xcassets */; };
 		554A2EE82AA60A7700010F4E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A2EE72AA60A7700010F4E /* Color.swift */; };
 		5550C2252AB71C1A001CF015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550C2242AB71C1A001CF015 /* AppDelegate.swift */; };
+		55CA496D2AF1378D009422D2 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CA496C2AF1378D009422D2 /* CounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		554A2EDF2AA6031700010F4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		554A2EE72AA60A7700010F4E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5550C2242AB71C1A001CF015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55CA496C2AF1378D009422D2 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				554A2EE62AA60A6000010F4E /* Util */,
 				554A2ED82AA6031500010F4E /* HelloSwiftUIApp.swift */,
 				554A2EDA2AA6031500010F4E /* ContentView.swift */,
+				55CA496C2AF1378D009422D2 /* CounterView.swift */,
 				554A2EDC2AA6031700010F4E /* Assets.xcassets */,
 				554A2EDE2AA6031700010F4E /* Preview Content */,
 			);
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CA496D2AF1378D009422D2 /* CounterView.swift in Sources */,
 				5550C2252AB71C1A001CF015 /* AppDelegate.swift in Sources */,
 				554A2EE82AA60A7700010F4E /* Color.swift in Sources */,
 				554A2EDB2AA6031500010F4E /* ContentView.swift in Sources */,
