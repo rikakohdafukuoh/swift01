@@ -13,42 +13,52 @@ struct NumbersView: View {
     
     var body: some View {
         NavigationView {
-            numbersList(viewModel: viewModel)
+            NumbersListView(viewModel: viewModel)
+                .navigationTitle("Numbers")
         }
-        .navigationTitle("Numbers")
         .alert(isPresented: $viewModel.showAlert) {
-            numbersAlert(viewModel: viewModel)
+            selectedNumberAlert(viewModel: viewModel)
         }
     }
 }
 
-private func numbersList(viewModel: NumbersViewModel) -> some View {
-    return List(viewModel.numbers.indices, id: \.self) { index in
-        numbersItem(viewModel: viewModel, index: index).onAppear {
-            if index == viewModel.numbers.count - 1 && !viewModel.isLoading {
-                viewModel.loadMoreData()
+private struct NumbersListView: View {
+    @ObservedObject var viewModel: NumbersViewModel
+    
+    var body: some View {
+        List(viewModel.numbers.indices, id: \.self) { index in
+            NumbersItemView(viewModel: viewModel, index: index)
+                .onAppear {
+                    if index == viewModel.numbers.count - 1 && !viewModel.isLoading {
+                        viewModel.loadMoreData()
+                    }
+                }
+        }
+    }
+}
+
+private struct NumbersItemView: View {
+    @ObservedObject var viewModel: NumbersViewModel
+    let index: Int
+    
+    var body: some View {
+        Button(
+            action: {
+                viewModel.showAlertFor(number: viewModel.numbers[index])
+            },
+            label: {
+                Text("\(viewModel.numbers[index])")
+                    .foregroundColor(Color.black)
             }
-        }
+        )
     }
 }
 
-private func numbersItem(viewModel: NumbersViewModel, index: Int) -> some View {
-    return Button (
-        action: {
-            viewModel.showAlertFor(number: viewModel.numbers[index])
-        },
-        label: {
-            Text("\(viewModel.numbers[index])")
-                .foregroundColor(Color.black)
-        }
-    )
-}
-
-private func numbersAlert(viewModel: NumbersViewModel) -> Alert {
+private func selectedNumberAlert(viewModel: NumbersViewModel) -> Alert {
     return Alert(
         title: Text("アラート"),
         message: Text("\(viewModel.selectedNumber ?? 0)"),
-        primaryButton: .default(Text("キャンセル")),      // 左ボタンの設定
+        primaryButton: .default(Text("キャンセル")),
         secondaryButton: .default(Text("OK")))
 }
 
