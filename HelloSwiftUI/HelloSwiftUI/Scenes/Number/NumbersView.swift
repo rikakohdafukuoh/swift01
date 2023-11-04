@@ -14,23 +14,47 @@ struct NumbersView: View {
     var body: some View {
         NavigationView {
             List(viewModel.numbers.indices, id: \.self) { index in
-                Text("\(viewModel.numbers[index])")
-                    .onAppear {
-                        if index == viewModel.numbers.count - 1 && !viewModel.isLoading {
-                            viewModel.loadMoreData()
-                        }
+                Button (
+                    action: {
+                        viewModel.showAlertFor(number: viewModel.numbers[index])
+                    },
+                    label: {
+                        Text("\(viewModel.numbers[index])")
+                            .foregroundColor(Color.black)
                     }
+                )
+                .onAppear {
+                    if index == viewModel.numbers.count - 1 && !viewModel.isLoading {
+                        viewModel.loadMoreData()
+                    }
+                }
             }
             .navigationTitle("Numbers")
+            .alert(isPresented: $viewModel.showAlert) {
+                Alert(
+                    title: Text("アラート"),
+                    message: Text("\(viewModel.selectedNumber ?? 0)"),
+                    primaryButton: .default(Text("キャンセル")),      // 左ボタンの設定
+                    secondaryButton: .default(Text("OK")))
+            }
         }
     }
 }
 
+
 class NumbersViewModel: ObservableObject {
     @Published var numbers: [Int] = []
     @Published var isLoading = false
+    @Published var showAlert = false
+    @Published var selectedNumber: Int?
     private var currentPage = 1
     private var cancellables = Set<AnyCancellable>()
+    
+    func showAlertFor(number: Int) {
+        print("tap")
+        self.selectedNumber = number
+        self.showAlert = true
+    }
     
     init() {
         loadMoreData()
@@ -68,7 +92,7 @@ class NumbersViewModel: ObservableObject {
                 }
                 
                 guard let data = data else {
-                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"]) 
+                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"])
                     promise(.failure(error))
                     return
                 }
