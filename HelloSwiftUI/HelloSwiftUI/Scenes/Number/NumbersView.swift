@@ -14,8 +14,8 @@ struct NumbersView: View {
     var body: some View {
         NavigationView {
             numbersList(viewModel: viewModel)
+                .navigationTitle("Numbers")
         }
-        .navigationTitle("Numbers")
         .alert(isPresented: $viewModel.showAlert) {
             numbersAlert(viewModel: viewModel)
         }
