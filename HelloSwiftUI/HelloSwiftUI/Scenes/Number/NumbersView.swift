@@ -17,7 +17,12 @@ struct NumbersView: View {
                 .navigationTitle("Numbers")
         }
         .alert(isPresented: $viewModel.showAlert) {
-            SelectedNumberAlert(viewModel: viewModel).alert
+            Alert(
+                title: Text("アラート"),
+                message: Text("\(viewModel.selectedNumber ?? 0)"),
+                primaryButton: .default(Text("キャンセル")),
+                secondaryButton: .default(Text("OK"))
+            )
         }
     }
 }
@@ -50,19 +55,6 @@ private struct NumbersItemView: View {
                 Text("\(viewModel.numbers[index])")
                     .foregroundColor(Color.black)
             }
-        )
-    }
-}
-
-private struct SelectedNumberAlert {
-    @ObservedObject var viewModel: NumbersViewModel
-
-    var alert: Alert {
-        Alert(
-            title: Text("アラート"),
-            message: Text("\(viewModel.selectedNumber ?? 0)"),
-            primaryButton: .default(Text("キャンセル")),
-            secondaryButton: .default(Text("OK"))
         )
     }
 }
