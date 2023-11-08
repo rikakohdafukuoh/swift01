@@ -57,30 +57,82 @@ enum HTTPMethodAndPayload {
 }
 
 enum WebAPI {
-    // コールバックつきの call 関数を用意する。
-    // コールバック関数に与えられる引数は、Output 型（レスポンスか通信エラーのどちらか）。
-    static func call(with input: Input, _ block: @escaping (Output) -> Void) {
-        
-        // 実際にサーバーと通信するコードはまだはっきりしていないので、
-        // Timer を使って非同期なコード実行だけを再現する。
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
-            
-            // 仮のレスポンスをでっちあげる。
-            let response: Response = (
-                statusCode: .ok,
-                headers: [:],
-                payload: "this is a response text".data(using: .utf8)! // 👈 最終的にこのコードは消えるので force unwrap しています
-            )
-            
-            // 仮のレスポンスでコールバックを呼び出す。
-            block(.hasResponse(response))
-        }
-    }
     
     static func call(with input: Input) {
         self.call(with: input) { _ in
             // NOTE: コールバックでは何もしない
         }
+    }
+    
+    // コールバックつきの call 関数を用意する。
+    // コールバック関数に与えられる引数は、Output 型（レスポンスか通信エラーのどちらか）。
+    static func call(with input: Input, _ block: @escaping (Output) -> Void) {
+        // URLSession へ渡す URLRequest を作成する。
+        let urlRequest = self.createURLRequest(by: input)
+        
+        // レスポンス受信後のコールバックを登録する。
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data, urlResponse, error) in
+            
+            // 受信したレスポンスまたは通信エラーを Output オブジェクトへ変換する。
+            let output = self.createOutput(
+                data: data,
+                urlResponse: urlResponse as? HTTPURLResponse,
+                error: error
+            )
+            
+            // コールバックに Output オブジェクトを渡す。
+            block(output)
+        }
+        task.resume()
+    }
+    
+    // Input から URLRequest を作成する関数。
+    static private func createURLRequest(by input: Input) -> URLRequest {
+        // URL から URLRequeast を作成する。
+        var request = URLRequest(url: input.url)
+        
+        // HTTP メソッドを設定する。
+        request.httpMethod = input.methodAndPayload.method
+        
+        // リクエストの本文を設定する。
+        request.httpBody = input.methodAndPayload.body
+        
+        // HTTP ヘッダを設定する。
+        request.allHTTPHeaderFields = input.headers
+        
+        return request
+    }
+    
+    // URLSession.dataTask のコールバック引数から Output オブジェクトを作成する関数。
+    static private func createOutput(
+        data: Data?,
+        urlResponse: HTTPURLResponse?,
+        error: Error?
+    ) -> Output {
+        // データと URLResponse がなければ通信エラー。
+        guard let data = data, let response = urlResponse else {
+            // エラーの内容を debugInfo に格納して通信エラーを返す。
+            return .noResponse(.noDataOrNoResponse(debugInfo: error.debugDescription))
+        }
+        
+        // HTTP ヘッダーを URLResponse から取り出して Output 型の
+        // HTTP ヘッダーの型 [String: String] と一致するように変換する。
+        var headers: [String: String] = [:]
+        for (key, value) in response.allHeaderFields.enumerated() {
+            headers[key.description] = String(describing: value)
+        }
+        
+        // Output オブジェクトを作成して返す。
+        return .hasResponse((
+            // HTTP ステータスコードから HTTPStatus を作成する。
+            statusCode: .from(code: response.statusCode),
+            
+            // 変換後の HTTP ヘッダーを返す。
+            headers: headers,
+            
+            // レスポンスの本文をそのまま返す。
+            payload: data
+        ))
     }
 }
 
@@ -100,6 +152,9 @@ enum Output {
 enum ConnectionError {
     /// データまたはレスポンスが存在しない場合のエラー。
     case noDataOrNoResponse(debugInfo: String)
+    
+    /// 不正な URL の場合のエラー。
+    case malformedURL(debugInfo: String)
 }
 
 
