@@ -68,7 +68,7 @@ class NumbersViewModel: ObservableObject {
                 }
                 
                 guard let data = data else {
-                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"]) 
+                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"])
                     promise(.failure(error))
                     return
                 }
