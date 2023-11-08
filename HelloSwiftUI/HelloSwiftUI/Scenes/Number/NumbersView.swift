@@ -13,22 +13,57 @@ struct NumbersView: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.numbers.indices, id: \.self) { index in
-                Text("\(viewModel.numbers[index])")
-                    .onAppear {
-                        if index == viewModel.numbers.count - 1 && !viewModel.isLoading {
-                            viewModel.loadMoreData()
-                        }
-                    }
-            }
-            .navigationTitle("Numbers")
+            NumbersListView(viewModel: viewModel)
+                .navigationTitle("Numbers")
         }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(
+                title: Text("アラート"),
+                message: Text("\(viewModel.selectedNumber ?? 0)"),
+                primaryButton: .default(Text("キャンセル")),
+                secondaryButton: .default(Text("OK"))
+            )
+        }
+    }
+}
+
+private struct NumbersListView: View {
+    @ObservedObject var viewModel: NumbersViewModel
+    
+    var body: some View {
+        List(viewModel.numbers.indices, id: \.self) { index in
+            NumbersItemView(viewModel: viewModel, index: index)
+                .onAppear {
+                    if index == viewModel.numbers.count - 1 && !viewModel.isLoading {
+                        viewModel.loadMoreData()
+                    }
+                }
+        }
+    }
+}
+
+private struct NumbersItemView: View {
+    @ObservedObject var viewModel: NumbersViewModel
+    let index: Int
+    
+    var body: some View {
+        Button(
+            action: {
+                viewModel.showAlertFor(number: viewModel.numbers[index])
+            },
+            label: {
+                Text("\(viewModel.numbers[index])")
+                    .foregroundColor(Color.black)
+            }
+        )
     }
 }
 
 class NumbersViewModel: ObservableObject {
     @Published var numbers: [Int] = []
     @Published var isLoading = false
+    @Published var showAlert = false
+    @Published var selectedNumber: Int?
     private var currentPage = 1
     private var cancellables = Set<AnyCancellable>()
     
@@ -68,7 +103,7 @@ class NumbersViewModel: ObservableObject {
                 }
                 
                 guard let data = data else {
-                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"]) 
+                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"])
                     promise(.failure(error))
                     return
                 }
@@ -83,6 +118,11 @@ class NumbersViewModel: ObservableObject {
             
             task.resume()
         }
+    }
+    
+    func showAlertFor(number: Int) {
+        self.selectedNumber = number
+        self.showAlert = true
     }
 }
 
