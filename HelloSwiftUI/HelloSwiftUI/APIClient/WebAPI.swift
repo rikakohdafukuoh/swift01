@@ -57,33 +57,33 @@ enum HTTPMethodAndPayload {
 }
 
 enum WebAPI {
-    
-    static func call(with input: Input) {
-        self.call(with: input) { _ in
-            // NOTE: コールバックでは何もしない
-        }
-    }
-    
-    // コールバックつきの call 関数を用意する。
-    // コールバック関数に与えられる引数は、Output 型（レスポンスか通信エラーのどちらか）。
-    static func call(with input: Input, _ block: @escaping (Output) -> Void) {
+
+    // Requestを送りReponseを受け取る
+    // 返り値はOutput型（レスポンスか通信エラーのどちらか）。
+    static func call(with input: Input) async -> Output {
         // URLSession へ渡す URLRequest を作成する。
         let urlRequest = self.createURLRequest(by: input)
         
-        // レスポンス受信後のコールバックを登録する。
-        let task = URLSession.shared.dataTask(with: urlRequest) { (data, urlResponse, error) in
+        do {
+            // URLSession のデータタスクを非同期で実行し、結果を取得する。
+            let (data, urlResponse) = try await URLSession.shared.data(for: urlRequest)
             
-            // 受信したレスポンスまたは通信エラーを Output オブジェクトへ変換する。
+            // 受信したレスポンスを Output オブジェクトへ変換する。
             let output = self.createOutput(
                 data: data,
                 urlResponse: urlResponse as? HTTPURLResponse,
+                error: nil
+            )
+            return output
+        } catch {
+            // エラーが発生した場合は、そのエラーを Output オブジェクトへ変換する。
+            let output = self.createOutput(
+                data: nil,
+                urlResponse: nil,
                 error: error
             )
-            
-            // コールバックに Output オブジェクトを渡す。
-            block(output)
+            return output
         }
-        task.resume()
     }
     
     // Input から URLRequest を作成する関数。
@@ -103,7 +103,7 @@ enum WebAPI {
         return request
     }
     
-    // URLSession.dataTask のコールバック引数から Output オブジェクトを作成する関数。
+    // URLSession.shared.dataの返り値から Output オブジェクトを作成する関数。
     static private func createOutput(
         data: Data?,
         urlResponse: HTTPURLResponse?,

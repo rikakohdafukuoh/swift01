@@ -36,19 +36,14 @@ class PageIndexedNumbersTests: XCTestCase {
         }
     }
     
-    func testNumbersFetch() {
-        let expectation = self.expectation(description: "API")
-        
-        PageIndexedNumbers.fetch(by: 1) { errorOrNumbers in
-            switch errorOrNumbers {
-            case let .left(error):
-                XCTFail("\(error)")
-            case let .right(pageIndexedNumbers):
-                XCTAssertEqual(pageIndexedNumbers.numbers, self.testList)
-            }
-            expectation.fulfill()
+    func testNumbersFetch() async {
+        let errorOrNumbers = await PageIndexedNumbers.fetch(by: 1)
+        switch errorOrNumbers {
+        case let .left(error):
+            XCTFail("\(error)")
+        case let .right(pageIndexedNumbers):
+            XCTAssertEqual(pageIndexedNumbers.numbers, self.testList)
         }
-        self.waitForExpectations(timeout: 10)
     }
 }
 

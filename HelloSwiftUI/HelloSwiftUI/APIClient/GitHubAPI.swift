@@ -45,23 +45,20 @@ struct GitHubZen {
     }
     
     /// GitHub Zen API を使って、禅なフレーズを取得する関数。
-    static func fetch(
-        // コールバック経由で、接続エラーか変換エラーか GitHubZen のいずれかを受け取れるようにする。
-        _ block: @escaping (Either<Either<ConnectionError, TransformError>, GitHubZen>) -> Void
-
-        // コールバックの引数の型が少しわかりづらいが、次の3パターンになる。
-        //
-        // - 接続エラーの場合     → .left(.left(ConnectionEither))
-        // - 変換エラーの場合     → .left(.right(TransformError))
-        // - 正常に取得できた場合 → .right(GitHubZen)
-    ) {
+    static func fetch() async -> Either<Either<ConnectionError, TransformError>, GitHubZen>
+    
+    // outputの型が少しわかりづらいが、次の3パターンになる。
+    //
+    // - 接続エラーの場合     → .left(.left(ConnectionEither))
+    // - 変換エラーの場合     → .left(.right(TransformError))
+    // - 正常に取得できた場合 → .right(GitHubZen)
+    {
         // URL が生成できない場合は不正な URL エラーを返す
         let urlString = "https://api.github.com/zen"
         guard let url = URL(string: urlString) else {
-            block(.left(.left(.malformedURL(debugInfo: urlString))))
-            return
+            return .left(.left(.malformedURL(debugInfo: urlString)))
         }
-
+        
         // GitHub Zen API は何も入力パラメータがないので入力は固定値になる。
         let input: Input = (
             url: url,
@@ -69,27 +66,27 @@ struct GitHubZen {
             headers: [:],
             methodAndPayload: .get
         )
-
+        
         // GitHub Zen API を呼び出す。
-        WebAPI.call(with: input) { output in
-            switch output {
-            case let .noResponse(connectionError):
-                // 接続エラーの場合は、接続エラーを渡す。
-                block(.left(.left(connectionError)))
-
-            case let .hasResponse(response):
-                // レスポンスがわかりやすくなるように GitHubZen へと変換する。
-                let errorOrZen = GitHubZen.from(response: response)
-
-                switch errorOrZen {
-                case let .left(error):
-                    // 変換エラーの場合は、変換エラーを渡す。
-                    block(.left(.right(error)))
-
-                case let .right(zen):
-                    // 正常に変換できた場合は、GitHubZen オブジェクトを渡す。
-                    block(.right(zen))
-                }
+        let output = await WebAPI.call(with: input)
+        
+        switch output {
+        case let .noResponse(connectionError):
+            // 接続エラーの場合は、接続エラーを渡す。
+            return .left(.left(connectionError))
+            
+        case let .hasResponse(response):
+            // レスポンスがわかりやすくなるように GitHubZen へと変換する。
+            let errorOrZen = GitHubZen.from(response: response)
+            
+            switch errorOrZen {
+            case let .left(error):
+                // 変換エラーの場合は、変換エラーを渡す。
+                return .left(.right(error))
+                
+            case let .right(zen):
+                // 正常に変換できた場合は、GitHubZen オブジェクトを渡す。
+                return .right(zen)
             }
         }
     }

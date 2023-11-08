@@ -36,11 +36,10 @@ struct GitHubUser: Codable {
         }
     }
     
-    static func fetch (by login: String, _ block: @escaping (Either<Either<ConnectionError, TransformError>, GitHubUser>) -> Void) {
+    static func fetch (by login: String) async -> Either<Either<ConnectionError, TransformError>, GitHubUser> {
         let urlString = "https://api.github.com/users"
         guard let url = URL(string: urlString)?.appendingPathComponent(login) else {
-            block(.left(.left(.malformedURL(debugInfo: "\(urlString)/\(login)"))))
-            return
+            return .left(.left(.malformedURL(debugInfo: "\(urlString)/\(login)")))
         }
         
         let input: Input = (
@@ -50,23 +49,23 @@ struct GitHubUser: Codable {
             methodAndPayload: .get
         )
         
-        WebAPI.call(with: input) { output in
-            switch output {
-            case let .noResponse(connectionError):
-                block(.left(.left(connectionError)))
+        let output = await WebAPI.call(with: input)
+        
+        switch output {
+        case let .noResponse(connectionError):
+            return .left(.left(connectionError))
+            
+        case let .hasResponse(response):
+            let errorOrUser = GitHubUser.from(response: response)
+            
+            switch errorOrUser {
+            case let .left(error):
+                // 変換エラーの場合は、変換エラーを渡す。
+                return .left(.right(error))
                 
-            case let .hasResponse(response):
-                let errorOrUser = GitHubUser.from(response: response)
-                
-                switch errorOrUser {
-                case let .left(error):
-                    // 変換エラーの場合は、変換エラーを渡す。
-                    block(.left(.right(error)))
-                    
-                case let .right(user):
-                    // 正常に変換できた場合は、GitHubZen オブジェクトを渡す。
-                    block(.right(user))
-                }
+            case let .right(user):
+                // 正常に変換できた場合は、GitHubZen オブジェクトを渡す。
+                return .right(user)
             }
         }
         
